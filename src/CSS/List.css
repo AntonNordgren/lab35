@@ -1,0 +1,33 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.listComponent {
+    width: 250px;
+    border: solid black 1px;
+    text-align: center;
+    font-size: 1.2em;
+    margin: auto;
+    padding: 20px;
+}
+
+.inputDiv button{
+    margin-left: 10px;
+}
+
+ul {
+    list-style: none;
+    margin: 10px;
+}
+
+ul li {
+    text-align: left;
+    padding: 10px;
+}
+
+ul li button {
+    position: relative;
+    left: 100px;
+}
