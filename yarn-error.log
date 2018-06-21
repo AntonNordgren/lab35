@@ -7433,7 +7433,7 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 3221225786
+  Exit code: 1
   Command: C:\WINDOWS\system32\cmd.exe
   Arguments: /d /s /c react-scripts test --env=jsdom
   Directory: C:\Users\Anton\Desktop\lab35
