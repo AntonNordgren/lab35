@@ -1,20 +1,56 @@
 
-/*
-Komponenten ska innehålla ett textfält där användarenkan skriva in en text.
-Där ska finnas en button, som man kan klicka på för att lägga till texten i en lista.
-Komponenten ska visa listan på något lämpligt sätt.
-När listan renderas ska varje element i den förses
-med en button som kan användas för att ta bort elementet.
-*/
-
 import React, { Component } from 'react';
 import './CSS/List.css';
 
 class Counter extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
+            list : [],
+            text : ''
         }
+    }
+
+    handleChange = event => {
+        this.setState({
+            text : event.target.value
+        });
+    }
+
+    handleAdd = event => {
+        let theList = this.state.list;
+        let newItem = this.state.text;
+        
+        if(newItem !== '' && !this.itemExist(newItem)) {
+            theList.push(newItem);
+        }
+        
+        this.setState({
+            list : theList
+        });
+    }
+
+    itemExist = (item) => {
+        for(let i = 0; i < this.state.list.length; i++) {
+            if(this.state.list[i] === item) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    handleDelete = item => {
+        let theList = this.state.list;
+        for(let i = 0; i < theList.length; i++) {
+            if(theList[i] === item) {
+                theList.splice(i, 1);
+            }
+        }
+        this.setState({
+            list : theList
+        });
+
     }
 
     render() {
@@ -24,23 +60,21 @@ class Counter extends Component {
                     List Component
                 </div>
                 <div className="inputDiv">
-                    <input type="text" />
-                    <button>Add</button>
+                    <input onChange={ this.handleChange } type="text" />
+                    <button onClick={ this.handleAdd }>Add</button>
                 </div>
                 <div>
                     <ul className="theList">
-                        <li>
-                            One
-                            <button>Delete</button>
-                        </li>
-                        <li>
-                            Two
-                            <button>Delete</button>
-                        </li>
-                        <li>
-                            Three
-                            <button>Delete</button>
-                        </li>
+                        {
+                            this.state.list.map((text, index) => {
+                                return(
+                                <li key={index + text}>
+                                    {text}
+                                    <button onClick={() => this.handleDelete(text)}>Remove</button>
+                                </li>
+                                );
+                            })
+                    }
                     </ul>
                 </div>
             </div>

@@ -24,12 +24,7 @@ class Counter extends Component {
     }
 
     handleText = event => {
-        if(event.target.value === '') {
-            this.setState({
-                value : 0
-            });
-        }
-        else if(!isNaN(parseInt(event.target.value))) {
+        if(!isNaN(parseInt(event.target.value))) {
             this.setState({
                 value : parseInt(event.target.value)
             });

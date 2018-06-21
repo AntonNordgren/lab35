@@ -1,0 +1,5 @@
+Gå igenom den andra gruppens kod för varje uppgift och svara på följande frågor.
+Har ni testat samma saker?
+Vilka är de viktigaste testfallen? Varför är de viktiga?
+Finns det några onödiga testfall i deras kod? Varför är de onödiga?
+
