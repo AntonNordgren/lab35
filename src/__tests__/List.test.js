@@ -16,11 +16,6 @@ describe('List test suite', () => {
         let wrapper = shallow(<List />);
     });
 
-    test('Initial list length should be 1', () => {
-        let wrapper = shallow(<List />);
-        expect(wrapper.find('.theList').length).toBe(1);
-    });
-
     test('input changes text in state', () => {
         let wrapper = shallow(<List />);
         let list = wrapper.find('input');
@@ -50,8 +45,9 @@ describe('List test suite', () => {
         let wrapper = shallow(<List />);
         let input = wrapper.find('input');
         let addButton = wrapper.find('button');
-        input.simulate('change', { target: { value: 'item1' } });
-        addButton.simulate('click');
+        wrapper.setState({
+            list : ['item1']
+        });
         input.simulate('change', { target: { value: 'item2' } });
         addButton.simulate('click');
         expect(wrapper.state('list')).toEqual(['item1', 'item2']);

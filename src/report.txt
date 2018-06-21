@@ -1,5 +1,40 @@
-Gå igenom den andra gruppens kod för varje uppgift och svara på följande frågor.
+﻿Gå igenom den andra gruppens kod för varje uppgift och svara på följande frågor.
+--------------------------------------------------------------------------------
+
+Counter Component
+
 Har ni testat samma saker?
+
+Vi har testat samma saker men den andra gruppen har skrivit testfall för
+Skriva in undefined, null och Infinity.
+
 Vilka är de viktigaste testfallen? Varför är de viktiga?
+
+Förutom att den ska renderas är de viktigaste testfallen att se till
+att increase och descrease knapparna fungerar och inputfältet fungerar.
+
 Finns det några onödiga testfall i deras kod? Varför är de onödiga?
+
+Jag tycker att det inte finns en anledning att testa om man kan skriva in
+undefined null eller infinity eftersom att det inte finns någon kanpp till dessa.
+
+--------------------------------------------------------------------------------
+
+List Component
+
+Har ni testat samma saker?
+
+Vi har inte testat lika mycket med rendering. När de testar att ta bort
+element från listan kollar de efter hur lång listan är medans vi har kollat
+vilka element som finns i listan efter att man har tagit bort dem.
+
+Vilka är de viktigaste testfallen? Varför är de viktiga?
+
+Förutom att den ska renderas är de viktigaste testfallen att se till
+att man kan lägga till och ta bort saker i listan.
+
+
+Finns det några onödiga testfall i deras kod? Varför är de onödiga?
+
+
 
