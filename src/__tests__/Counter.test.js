@@ -21,7 +21,7 @@ describe('Counter test suite', () => {
         expect( wrapper.state('value')).toBe(0);
     });
 
-    test('Increment button works', () => {
+    test('Increase button works', () => {
         let wrapper = shallow(<Counter />);
         let button = wrapper.find('button').at(0);
         button.simulate('click');

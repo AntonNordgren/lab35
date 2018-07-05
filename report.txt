@@ -1,0 +1,43 @@
+﻿Gå igenom den andra gruppens kod för varje uppgift och svara på följande frågor.
+
+Vi jämför med Alejandro och Annas kod.
+--------------------------------------------------------------------------------
+
+Counter Component
+
+Har ni testat samma saker?
+
+	Vi har testat samma saker men den andra gruppen har skrivit testfall för
+	att skriva in undefined, null och Infinity.
+
+Vilka är de viktigaste testfallen? Varför är de viktiga?
+
+	Förutom att den ska renderas är de viktigaste testfallen att se till
+	att increase och descrease knapparna fungerar och inputfältet fungerar.
+
+Finns det några onödiga testfall i deras kod? Varför är de onödiga?
+
+	De kollar att om man trycker på Infinity eller undefined så ska det inte hände någonting i state.
+	Men det finns ju inga knappar för detta. Det verkar onödigt att testa detta.
+
+--------------------------------------------------------------------------------
+
+List Component
+
+Har ni testat samma saker?
+
+	Vi har inte testat lika mycket med rendering. När de testar att ta bort
+	element från listan kollar de efter hur lång listan är medans vi har kollat
+	vilka element som finns i listan efter att man har tagit bort dem. Vi gjorde
+	att man inte kan lägga till något i listan som redan finns. Det var inte något
+	man var tvungen att göra men vi gjorde det för att göra den enklare att kunna
+	ta bort element från listan.
+
+Vilka är de viktigaste testfallen? Varför är de viktiga?
+
+	Förutom att den ska renderas är de viktigaste testfallen att se till
+	att man kan lägga till och ta bort element i listan.
+
+Finns det några onödiga testfall i deras kod? Varför är de onödiga?
+
+	Tror inte det.
